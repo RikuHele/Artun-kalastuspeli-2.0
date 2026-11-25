@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("assets/fonts/PixelifySans-Medium.ttf") format("truetype");
+  font-weight: 400 700;
+  font-display: swap;
+}
+/* Alexin tekemä tyylittely osio*/
+:root {
+  --text: #FFFFFF;
+  --button: #E23B3B;
+  --font: "Pixelify Sans", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: #14301f;
+}
+
+.menu {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  background: url("assets/background.png") center / cover no-repeat;
+  image-rendering: pixelated;
+}
+
+.menu[hidden] { display: none; }
+
+h1 {
+  margin: 0;
+  max-width: 14ch;
+  font-size: clamp(3rem, 11vw, 7.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+h2 {
+  margin: 0;
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.help-text {
+  max-width: 34ch;
+  font-size: clamp(1.15rem, 2.6vw, 1.6rem);
+  line-height: 1.5;
+}
+
+.help-text p { margin: 0 0 1em; }
+.help-text p:last-child { margin-bottom: 0; }
+
+.start {
+  display: inline-block;
+  font: inherit;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 700;
+  color: var(--text);
+  background: var(--button);
+  border: none;
+  padding: 0.7em 1.8em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.start:focus-visible { outline: 4px solid #F2D14B; outline-offset: 6px; }
+
+.game {
+  position: relative;
+  min-height: 100vh;
+  background: url("assets/lake.png") center / cover no-repeat;
+  image-rendering: pixelated;
+}
+
+.back {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 0.7rem;
+  line-height: 0;
+}
+
+.back img {
+  display: block;
+  width: 2.6rem;
+  height: 2.6rem;
+  image-rendering: auto;
+}
