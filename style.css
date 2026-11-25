@@ -119,3 +119,14 @@ h2 {
   height: 2.6rem;
   image-rendering: auto;
 }
+
+/* Alex kala */
+
+.fisher {
+  position: absolute;
+  left: 30%;
+  bottom: 25%;
+  height: 50hv;
+  transform: scaleX(-1);
+  image-rendering: pixelated;
+}
